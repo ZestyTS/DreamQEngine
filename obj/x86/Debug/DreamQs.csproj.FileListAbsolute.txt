@@ -35,3 +35,13 @@ C:\Users\Nick\stuff\Projects\DreamQ\bin\Debug\System.Data.SQLite.xml
 C:\Users\Nick\stuff\Projects\DreamQ\obj\x86\Debug\DreamQs.Properties.Resources.resources
 C:\Users\Nick\stuff\Projects\DreamQ\obj\x86\Debug\DreamQs.frmMenu.resources
 C:\Users\Nick\stuff\Projects\DreamQ\obj\x86\Debug\DreamQs.GameForm.resources
+C:\Users\stackframe\Projects\DreamQ\bin\Debug\DreamQs.exe.config
+C:\Users\stackframe\Projects\DreamQ\obj\x86\Debug\DreamQs.pdb
+C:\Users\stackframe\Projects\DreamQ\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\stackframe\Projects\DreamQ\obj\x86\Debug\DreamQs.frmMenu.resources
+C:\Users\stackframe\Projects\DreamQ\obj\x86\Debug\DreamQs.GameForm.resources
+C:\Users\stackframe\Projects\DreamQ\obj\x86\Debug\DreamQs.Properties.Resources.resources
+C:\Users\stackframe\Projects\DreamQ\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\stackframe\Projects\DreamQ\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\stackframe\Projects\DreamQ\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\stackframe\Projects\DreamQ\obj\x86\Debug\ResGen.write.1.tlog
