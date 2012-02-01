@@ -19,10 +19,38 @@ namespace DreamQs
         protected Character[] mActors;
 
         //The beginning dialogue in this scene
-        protected Dialogue startingDialogue;
+        protected Dialogue mStartingDialogue;
 
-        public Scene()
+        public Scene():this(0)
         {
+        }
+
+        public Scene(int sceneRef)
+        {
+        }
+
+        public Location location
+        {
+            set { mLocation = value; }
+            get { return mLocation; }
+        }
+
+        public Dialogue startingDialogue
+        {
+            set { mStartingDialogue = value; }
+            get { return mStartingDialogue; }
+        }
+
+        public Character[] actors
+        {
+            set { mActors = value; }
+            get { return mActors; }
+        }
+
+        public string setup
+        {
+            set { mSetup = value; }
+            get { return mSetup; }
         }
     }
 }

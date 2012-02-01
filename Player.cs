@@ -31,8 +31,48 @@ namespace DreamQs
         //your abilities with magic
         protected int mIntelligence;
 
-        public Player()
+        public Player(string name):base(name)
         {
+        }
+
+        public Player(SavedGame saveFile)
+        {
+            mPopularity = saveFile.popularity;
+            mStrength = saveFile.popularity;
+            mName = saveFile.playerName;
+            mCharisma = saveFile.charisma;
+            mIntelligence = saveFile.intelligence;
+        }
+
+        //Getters and setters for popularity
+        public int popularity
+        {
+            set { mPopularity = value; }
+            get { return mPopularity; }
+        }
+
+
+        //Getters and adders for strength
+        public int strength
+        {
+            set { mStrength = value; }
+            get { return mStrength; }
+        }
+
+
+        //Getters and adders for charisma
+        public int charisma
+        {
+            set { mCharisma = value; }
+            get { return mCharisma; }
+        }
+
+
+        //Getters and adders for intelligence
+        public int intelligence
+        {
+            set { mIntelligence = value; }
+            get { return mIntelligence; }
         }
     }
 }

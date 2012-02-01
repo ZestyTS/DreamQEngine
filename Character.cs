@@ -15,5 +15,17 @@ namespace DreamQs
         public Character()
         {
         }
+
+        public Character(string name)
+        {
+            mName = name;
+        }
+
+        //Getters and setters for popularity
+        public string name
+        {
+            set { mName = value; }
+            get { return mName; }
+        }
     }
 }

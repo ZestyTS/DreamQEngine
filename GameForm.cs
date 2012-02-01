@@ -6,26 +6,33 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-using System.Data.SQLite;
-
 namespace DreamQs
 {
-    public partial class GameForm : Form
+    partial class GameForm : Form
     {
-        private Scene scene1;
-        private int whichLine = 0;
+        protected Game gameObject;
 
         public GameForm()
         {
+        }
+
+        public GameForm(Game game)
+        {
+
+            //Set up initial values based on the passed in game.
+            gameObject = game;
+
+            //lblDialogue.Text = gameObject.currentScene.startingDialogue.text;
+
+            //Set bg image
+
+            //Set NPC image
+
+            //Show choices
+
+            this.Show();
+
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
         }
     }
 }

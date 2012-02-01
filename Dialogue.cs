@@ -22,9 +22,22 @@ namespace DreamQs
         {
         }
 
-        public void makeChoice(int choiceIndex)
+        public string text
         {
-            Choice choiceMade = mChoices[choiceIndex];
+            set { mText = value; }
+            get { return mText; }
+        }
+
+        public Choice[] choices
+        {
+            set { mChoices = value; }
+            get { return mChoices; }
+        }
+
+        public Character actor
+        {
+            set { mActor = value; }
+            get { return mActor; }
         }
     }
 }
