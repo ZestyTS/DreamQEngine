@@ -38,5 +38,10 @@ namespace DreamQs
 
             InitializeComponent();
         }
+
+        private void GameForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
