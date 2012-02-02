@@ -14,11 +14,15 @@ namespace DreamQs
     {
         public frmMenu()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.None;
+
             InitializeComponent();
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Game game = new Game("Sunshine");
             game.start();
         }

@@ -38,7 +38,7 @@
             this.lblDialogue.Location = new System.Drawing.Point(0, 390);
             this.lblDialogue.Name = "lblDialogue";
             this.lblDialogue.Padding = new System.Windows.Forms.Padding(10, 0, 10, 10);
-            this.lblDialogue.Size = new System.Drawing.Size(945, 148);
+            this.lblDialogue.Size = new System.Drawing.Size(1010, 148);
             this.lblDialogue.TabIndex = 0;
             this.lblDialogue.Text = "label1";
             // 
@@ -46,13 +46,13 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(945, 538);
+            this.pictureBox1.Size = new System.Drawing.Size(1010, 538);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // GameForm
             // 
-            this.ClientSize = new System.Drawing.Size(944, 538);
+            this.ClientSize = new System.Drawing.Size(1008, 730);
             this.Controls.Add(this.lblDialogue);
             this.Controls.Add(this.pictureBox1);
             this.Name = "GameForm";

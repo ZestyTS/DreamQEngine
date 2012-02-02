@@ -17,12 +17,11 @@ namespace DreamQs
         public GameForm()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         public GameForm(Game game)
         {
+            //this.StartPosition = FormStartPosition.Manual;
             //Set up initial values based on the passed in game.
             gameObject = game;
 
@@ -37,11 +36,13 @@ namespace DreamQs
             this.Show();
 
             InitializeComponent();
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Location = new System.Drawing.Point((Screen.PrimaryScreen.Bounds.Width - this.Width) / 2, (Screen.PrimaryScreen.Bounds.Height - this.Height) / 2);
         }
 
         private void GameForm_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
