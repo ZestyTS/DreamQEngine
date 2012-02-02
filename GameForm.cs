@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Windows;
+using System.Data.SQLite;
 
 namespace DreamQs
 {
@@ -14,11 +16,13 @@ namespace DreamQs
 
         public GameForm()
         {
+            InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         public GameForm(Game game)
         {
-
             //Set up initial values based on the passed in game.
             gameObject = game;
 
