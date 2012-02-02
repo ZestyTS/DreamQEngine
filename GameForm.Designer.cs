@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.lblDialogue = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbBackground = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDialogue
@@ -42,23 +42,23 @@
             this.lblDialogue.TabIndex = 0;
             this.lblDialogue.Text = "label1";
             // 
-            // pictureBox1
+            // pbBackground
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1010, 538);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pbBackground.Location = new System.Drawing.Point(0, 0);
+            this.pbBackground.Name = "pbBackground";
+            this.pbBackground.Size = new System.Drawing.Size(1010, 538);
+            this.pbBackground.TabIndex = 1;
+            this.pbBackground.TabStop = false;
             // 
             // GameForm
             // 
             this.ClientSize = new System.Drawing.Size(1008, 730);
             this.Controls.Add(this.lblDialogue);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbBackground);
             this.Name = "GameForm";
             this.Text = "GameForm";
             this.Load += new System.EventHandler(this.GameForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -66,6 +66,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblDialogue;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbBackground;
     }
 }

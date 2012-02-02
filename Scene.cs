@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 
-using System.Data.SQLite;
 using System.Data;
 
 namespace DreamQs
@@ -27,6 +26,22 @@ namespace DreamQs
 
         public Scene(int sceneRef)
         {
+        }
+
+        public void beginScene(GameForm gameForm)
+        {
+            gameForm.Controls["lblDialogue"].Text = "Scene Start!";
+            gameForm.Controls["pbBackground"].BackColor = System.Drawing.Color.AliceBlue;
+            //Get location information and set form stuff
+            //Show scene setup text
+
+            //Show initial dialogue
+
+            //Wait for choice
+
+            //Do consequences of choice
+
+            //Show next dialogue
         }
 
         public Location location

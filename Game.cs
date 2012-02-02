@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 
-using System.Data.SQLite;
 using System.Data;
 
 namespace DreamQs
@@ -32,6 +31,7 @@ namespace DreamQs
 
         public void start(){
             GameForm gameForm = new GameForm(this);
+            currentScene.beginScene(gameForm);
         }
     }
 
@@ -39,18 +39,17 @@ namespace DreamQs
     struct SavedGame
     {
         public string playerName;
-        public int popularity, strength, charisma, intelligence, sceneNum;
+        public Stat[] playerStats;
         //Grades
         public int[] loveInterestLevels;
 
-        public SavedGame(string name, int pop, int str, int chr, int intel, int scene, int[]loveLevels)
+        public int sceneNum;
+
+        public SavedGame(string name, Stat[] stats, int[]loveLevels, int scene)
         {
             playerName = name;
-            popularity = pop;
-            strength = str;
-            charisma = chr;
-            intelligence = intel;
             sceneNum = scene;
+            playerStats = stats; 
             loveInterestLevels = loveLevels;
         }
     }

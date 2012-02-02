@@ -7,33 +7,29 @@ using System.Data;
 
 namespace DreamQs
 {
-    class Character
+    class Stat
     {
-        //This character's name
+        //This stat's name (Strength, Intelligence, etc)
         protected string mName;
 
-        protected Stat[] mStats;
+        //The value stored in this stat
+        protected int mValue;
 
-        public Character()
-        {
-        }
-
-        public Character(string name)
+        public Stat(string name)
         {
             mName = name;
         }
 
-        //Getters and setters for popularity
         public string name
         {
             set { mName = value; }
             get { return mName; }
         }
 
-        public Stat[] stats
+        public int value
         {
-            set { mStats = value; }
-            get { return mStats; }
+            set { mValue = value; }
+            get { return mValue; }
         }
     }
 }

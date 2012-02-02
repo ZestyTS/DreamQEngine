@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 
-using System.Data.SQLite;
 using System.Data;
 
 namespace DreamQs
@@ -20,6 +19,11 @@ namespace DreamQs
 
         public Dialogue()
         {
+        }
+
+        public Choice makeChoice(int choiceIndex)
+        {
+            return mChoices[0];
         }
 
         public string text
