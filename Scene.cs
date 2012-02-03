@@ -28,20 +28,65 @@ namespace DreamQs
         {
         }
 
-        public void beginScene(GameForm gameForm)
+        public Outcome startFight(Player player, Enemy enemy)
         {
-            gameForm.Controls["lblDialogue"].Text = "Scene Start!";
-            gameForm.Controls["pbBackground"].BackColor = System.Drawing.Color.AliceBlue;
+            //Do fighting things!
+            return new Outcome(OutcomeType.scene, 0);
+        }
+
+        public Scene doScene(GameForm gameForm)
+        {
+
+            gameForm.Controls["pbBackground"].BackgroundImage = System.Drawing.Image.FromFile(mLocation.imgPath);
             //Get location information and set form stuff
+            
             //Show scene setup text
+            gameForm.Controls["lblDialogue"].Text = mSetup;
+
+            //Wait for button press
 
             //Show initial dialogue
+            string initialDialogue = mStartingDialogue.text;
 
-            //Wait for choice
+            //Give options to user
+            List<Option> choices = mStartingDialogue.getDisplayChoices(gameForm.gameObject);
 
-            //Do consequences of choice
+            //wait for user's choice
+            int pickOption = 0;
 
-            //Show next dialogue
+            //Find outcome of choice
+            Outcome choiceOutcome = choices[pickOption].pickOption(gameForm.gameObject);
+
+            while (choiceOutcome.type != OutcomeType.scene)
+            {
+                //Keep doing stuff!
+                if (choiceOutcome.type == OutcomeType.dialogue)
+                {
+                    //Do dialogue
+                    Dialogue nextDialogue = new Dialogue(choiceOutcome.reference);
+
+                    //Give options to user
+                    List<Option> nextChoices = nextDialogue.getDisplayChoices(gameForm.gameObject);
+
+                    //wait for user's choice
+                    int nextOption = 0;
+
+                    //Set the outcome of the choice!
+                    choiceOutcome = choices[nextOption].pickOption(gameForm.gameObject);
+                }
+                else if (choiceOutcome.type == OutcomeType.fight)
+                {
+                    //Do fight!
+                    choiceOutcome = startFight(gameForm.gameObject.player, new Enemy(choiceOutcome.reference));
+                }
+                else
+                {
+                    //broken
+                    return null;
+                }
+            }
+
+            return new Scene(choiceOutcome.reference);
         }
 
         public Location location

@@ -10,6 +10,7 @@ namespace DreamQs
     {
         public Player player;
         public Scene currentScene;
+        public Dictionary<string, bool> events;
 
         public Game()
         {
@@ -31,7 +32,11 @@ namespace DreamQs
 
         public void start(){
             GameForm gameForm = new GameForm(this);
-            currentScene.beginScene(gameForm);
+            Scene nextScene = currentScene.doScene(gameForm);
+            while (nextScene != null)
+            {
+                nextScene = nextScene.doScene(gameForm);
+            }
         }
     }
 
@@ -39,13 +44,13 @@ namespace DreamQs
     struct SavedGame
     {
         public string playerName;
-        public Stat[] playerStats;
+        public Dictionary<string, int> playerStats;
         //Grades
         public int[] loveInterestLevels;
 
         public int sceneNum;
 
-        public SavedGame(string name, Stat[] stats, int[]loveLevels, int scene)
+        public SavedGame(string name, Dictionary<string, int> stats, int[]loveLevels, int scene)
         {
             playerName = name;
             sceneNum = scene;

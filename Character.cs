@@ -12,7 +12,8 @@ namespace DreamQs
         //This character's name
         protected string mName;
 
-        protected Stat[] mStats;
+        //A list of the character's stats
+        protected Dictionary<string, int> mStats;
 
         public Character()
         {
@@ -30,7 +31,7 @@ namespace DreamQs
             get { return mName; }
         }
 
-        public Stat[] stats
+        public Dictionary<string, int> stats
         {
             set { mStats = value; }
             get { return mStats; }

@@ -15,15 +15,48 @@ namespace DreamQs
         protected Character mActor;
 
         //The choices presented to you at the end of the dialogue
-        protected Choice[] mChoices;
+        protected Option[] mChoices;
 
         public Dialogue()
         {
         }
 
-        public Choice makeChoice(int choiceIndex)
+        public Dialogue(int dialogueRef)
+        {
+        }
+
+        public Option makeChoice(int choiceIndex)
         {
             return mChoices[0];
+        }
+
+        public List<Option> getDisplayChoices(Game game)
+        {
+            List<Option> returnList = new List<Option>();
+            foreach (Option option in mChoices)
+            {
+                bool showOption = true;
+                foreach (KeyValuePair<string, int> statReq in option.statReqs)
+                {
+                    if (game.player.stats[statReq.Key] < statReq.Value)
+                    {
+                        showOption = false;
+                    }
+                }
+                foreach (KeyValuePair<string, bool> eventReq in option.eventReqs)
+                {
+                    if (!(game.events.ContainsKey(eventReq.Key) && game.events[eventReq.Key]))
+                    {
+                        showOption = false;
+                    }
+                }
+                if (showOption)
+                {
+                    //Display this option
+                    returnList.Add(option);
+                }
+            }
+            return returnList;
         }
 
         public string text
@@ -32,7 +65,7 @@ namespace DreamQs
             get { return mText; }
         }
 
-        public Choice[] choices
+        public Option[] choices
         {
             set { mChoices = value; }
             get { return mChoices; }

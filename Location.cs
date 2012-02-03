@@ -17,5 +17,16 @@ namespace DreamQs
         public Location()
         {
         }
+
+        public string imgPath {
+            set { mImgPath = value; }
+            get { return mImgPath; }
+        }
+
+        public string name
+        {
+            set { mName = value; }
+            get { return mName; }
+        }
     }
 }

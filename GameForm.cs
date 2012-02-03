@@ -11,7 +11,7 @@ namespace DreamQs
 {
     partial class GameForm : Form
     {
-        protected Game gameObject;
+        public Game gameObject;
 
         public GameForm()
         {

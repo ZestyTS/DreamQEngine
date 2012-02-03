@@ -9,9 +9,10 @@ namespace DreamQs
 {
     class Enemy : Character
     {
-        //Combat stats
-
-        public Enemy()
+        public Enemy():this(0)
+        {
+        }
+        public Enemy(int reference)
         {
         }
     }
