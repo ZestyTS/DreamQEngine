@@ -5,7 +5,7 @@ using System.Text;
 
 using System.Data;
 
-namespace DreamQs
+namespace DreamQ.Character
 {
     class Character
     {

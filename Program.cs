@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace DreamQs
+namespace DreamQ
 {
     static class Program
     {

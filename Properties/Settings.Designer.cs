@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DreamQs.Properties {
+namespace DreamQ.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

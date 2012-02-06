@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamQs", "DreamQs.csproj", "{46D5A1F3-94B0-46E3-A212-FDCD041C7273}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreamQ", "DreamQ.csproj", "{46D5A1F3-94B0-46E3-A212-FDCD041C7273}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
