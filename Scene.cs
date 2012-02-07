@@ -4,7 +4,7 @@ using System.Text;
 
 using System.Data;
 
-namespace DreamQ
+namespace DreamQEngine
 {
     class Scene
     {

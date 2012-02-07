@@ -4,7 +4,7 @@ using System.Text;
 
 using System.Data;
 
-namespace DreamQ.Character
+namespace DreamQEngine.Character
 {
     class LoveInterest : Character
     {

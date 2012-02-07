@@ -5,7 +5,7 @@ using System.Text;
 
 using System.Data;
 
-namespace DreamQ.Character
+namespace DreamQEngine.Character
 {
     class Enemy : Character
     {
