@@ -55,7 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Option.cs" />
-    <Compile Include="Game.cs" />
+    <Compile Include="VisualNovel.cs" />
+    <Compile Include="VisualNovelGame.cs" />
     <Compile Include="Actor.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Location.cs" />
