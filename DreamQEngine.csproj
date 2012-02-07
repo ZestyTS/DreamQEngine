@@ -56,9 +56,7 @@
   <ItemGroup>
     <Compile Include="Option.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="LoveInterest.cs" />
-    <Compile Include="Enemy.cs" />
+    <Compile Include="Actor.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Dialogue.cs" />
