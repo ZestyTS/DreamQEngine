@@ -6,14 +6,14 @@ namespace DreamQEngine
 {
     class VisualNovel
     {
-        public VisualNovel()
+        public VisualNovel(string gameData)
         {
-            //Create a new game from nothing.
+            //Create a new visual novel from a database file.
         }
 
-        public VisualNovel(SavedGame gamefile)
+        public VisualNovel(string gameData, string savedGame)
         {
-            //Load a game from a saved game file
+            //Load a saved visual novel
         }
     }
 

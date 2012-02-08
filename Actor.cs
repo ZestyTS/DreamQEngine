@@ -9,10 +9,6 @@ namespace DreamQEngine
         //This character's name
         protected string mName;
 
-        public Actor()
-        {
-        }
-
         public Actor(string name)
         {
             mName = name;

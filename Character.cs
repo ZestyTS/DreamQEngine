@@ -9,13 +9,15 @@ namespace DreamQEngine.Character
         //A list of the character's stats
         protected Dictionary<string, int> mStats;
 
-        public Character()
+        public Character(string name)
+            :base(name)
         {
         }
 
-        public Character(string name)
+        public Character(string name, Dictionary<string, int> stats)
+            : this(name)
         {
-            mName = name;
+            mStats = stats;
         }
 
         public Dictionary<string, int> stats

@@ -19,15 +19,6 @@ namespace DreamQEngine
         {
         }
 
-        public Dialogue(int dialogueRef)
-        {
-        }
-
-        public Option makeChoice(int choiceIndex)
-        {
-            return mChoices[0];
-        }
-
         public string text
         {
             set { mText = value; }

@@ -77,7 +77,7 @@ namespace DreamQEngine
         }
     }
 
-    public enum OutcomeType { fight, dialogue, scene }
+    public enum OutcomeType { dialogue, scene, fight, gameEnd}
     struct Outcome
     {
         public OutcomeType type;

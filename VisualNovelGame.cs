@@ -6,17 +6,12 @@ namespace DreamQEngine.Character
 {
     class VisualNovelGame : VisualNovel
     {
-        public VisualNovelGame()
+        public VisualNovelGame(string gameData) : base(gameData)
         {
-            //Create a new game from nothing.
+            //Create a new game from a database file
         }
 
-        public VisualNovelGame(string playerName)
-        {
-            //Create a new game with a character
-        }
-
-        public VisualNovelGame(SavedGame gamefile)
+        public VisualNovelGame(string gameData, string savedGame) : base(gameData, savedGame)
         {
             //Load a game from a saved game file
         }
