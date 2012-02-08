@@ -10,7 +10,7 @@ namespace DreamQEngine
         protected string mText;
 
         //The NPC saying this dialogue
-        protected Character mActor;
+        protected Actor mActor;
 
         //The choices presented to you at the end of the dialogue
         protected Option[] mChoices;
@@ -28,35 +28,6 @@ namespace DreamQEngine
             return mChoices[0];
         }
 
-        public List<Option> getDisplayChoices(Game game)
-        {
-            List<Option> returnList = new List<Option>();
-            foreach (Option option in mChoices)
-            {
-                bool showOption = true;
-                foreach (KeyValuePair<string, int> statReq in option.statReqs)
-                {
-                    if (game.player.stats[statReq.Key] < statReq.Value)
-                    {
-                        showOption = false;
-                    }
-                }
-                foreach (KeyValuePair<string, bool> eventReq in option.eventReqs)
-                {
-                    if (!(game.events.ContainsKey(eventReq.Key) && game.events[eventReq.Key]))
-                    {
-                        showOption = false;
-                    }
-                }
-                if (showOption)
-                {
-                    //Display this option
-                    returnList.Add(option);
-                }
-            }
-            return returnList;
-        }
-
         public string text
         {
             set { mText = value; }
@@ -69,7 +40,7 @@ namespace DreamQEngine
             get { return mChoices; }
         }
 
-        public Character actor
+        public Actor actor
         {
             set { mActor = value; }
             get { return mActor; }

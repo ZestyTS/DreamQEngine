@@ -34,19 +34,6 @@ namespace DreamQEngine
         {
         }
 
-        public Outcome pickOption(Game game) {
-            foreach (KeyValuePair<string, int> statChange in mStatChanges)
-            {
-                game.player.stats[statChange.Key] += statChange.Value;
-            }
-            foreach (KeyValuePair<string, bool> eventChange in mEventChanges)
-            {
-                game.events.Add(eventChange.Key, eventChange.Value);
-            }
-
-            return mOutcome;
-        }
-
         public string text
         {
             set { mText = value; }

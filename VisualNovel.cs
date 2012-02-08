@@ -20,8 +20,6 @@ namespace DreamQEngine
     //A simple object to represent a saved game state
     struct SavedGame
     {
-        public SavedGame()
-        {
-        }
+
     }
 }
