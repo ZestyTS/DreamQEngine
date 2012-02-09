@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DreamQEngine.Character
 {
-    class VisualNovelGame : VisualNovel
+    public class VisualNovelGame : VisualNovel
     {
         public VisualNovelGame(string gameData) : base(gameData)
         {

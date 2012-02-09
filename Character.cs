@@ -4,18 +4,16 @@ using System.Text;
 
 namespace DreamQEngine.Character
 {
-    class Character : Actor
+    public class Character : Actor
     {
         //A list of the character's stats
         protected Dictionary<string, int> mStats;
 
-        public Character(string name)
-            :base(name)
+        public Character(string name):base(name)
         {
         }
 
-        public Character(string name, Dictionary<string, int> stats)
-            : this(name)
+        public Character(string name, Dictionary<string, int> stats):base(name)
         {
             mStats = stats;
         }

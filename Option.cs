@@ -6,7 +6,7 @@ using System.Data;
 
 namespace DreamQEngine
 {
-    class Option
+    public class Option
     {
         //The text of this choice
         protected string mText;
@@ -32,6 +32,13 @@ namespace DreamQEngine
 
         public Option()
         {
+        }
+
+        public Option(string text, string displayText, int outcomeType, int outcomeRef)
+        {
+            mText = text;
+            mDisplayText = displayText;
+            mOutcome = new Outcome(getOutcomeType(outcomeType), outcomeRef);
         }
 
         public string text
@@ -75,10 +82,30 @@ namespace DreamQEngine
             set { mEventChanges = value; }
             get { return mEventChanges; }
         }
+
+        private OutcomeType getOutcomeType(int type) {
+            if(type == 0){
+                return OutcomeType.dialogue;
+            }
+            else if (type == 1)
+            {
+                return OutcomeType.scene;
+            }
+            else if (type == 2)
+            {
+                return OutcomeType.fight;
+            }
+            else
+            {
+                return OutcomeType.gameEnd;
+            }
+        }
     }
 
-    public enum OutcomeType { dialogue, scene, fight, gameEnd}
-    struct Outcome
+    public enum OutcomeType { 
+        dialogue, scene, fight, gameEnd
+    }
+    public struct Outcome
     {
         public OutcomeType type;
         public int reference;
