@@ -12,7 +12,7 @@ namespace DreamQEngine
     {
         Scene mCurrentScene;
         String mName;
-        public SQLiteConnection conn;
+        SQLiteConnection conn;
 
         public VisualNovel(string gameData)
         {
@@ -40,9 +40,20 @@ namespace DreamQEngine
             //Load a saved visual novel            
         }
 
-        public Scene getScene()
+        public Scene getScene(int sceneRef)
         {
-            return mCurrentScene;
+            return new Scene(sceneRef, conn);
+        }
+
+        public Dialogue getDialogue(int dialogueRef)
+        {
+            return new Dialogue(dialogueRef, conn);
+        }
+
+        public Scene currentScene
+        {
+            get { return mCurrentScene; }
+            set { mCurrentScene = value; }
         }
     }
 

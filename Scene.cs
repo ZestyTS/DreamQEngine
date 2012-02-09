@@ -54,13 +54,6 @@ namespace DreamQEngine
             }
         }
 
-        public Scene getOutcome(Outcome outcome)
-        {
-            SQLiteConnection conn = new SQLiteConnection(String.Format("Data Source={0}", "C:/theboywholived.db"));
-            conn.Open();
-            return new Scene(outcome.reference, conn);
-        }
-
         public Location location
         {
             set { mLocation = value; }
